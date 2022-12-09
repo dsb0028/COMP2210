@@ -50,6 +50,7 @@ public class ArrayRandomizedList<T> implements RandomizedList<T> {
    public boolean isEmpty() {
       return size == 0;
    }
+   
    @SuppressWarnings("unchecked")
    public Iterator<T> iterator() {
       return new ArrayIterator(elements, size);
@@ -74,7 +75,6 @@ public class ArrayRandomizedList<T> implements RandomizedList<T> {
       elements = newArray;
    }
 
-   
    public T remove() {
       if(isEmpty()) {
          return null;
