@@ -75,6 +75,7 @@ public final class Selector {
       if (coll.isEmpty()) {
          throw new NoSuchElementException();
       }
+      
       Iterator <T> itr = coll.iterator();
       T max = itr.next();
       for (T element : coll) {
@@ -82,10 +83,8 @@ public final class Selector {
             max = element;
          }
       }
-      return max;
-   
+      return max;   
    }
-
 
    /**
     * Selects the kth minimum value from the Collection coll as defined by the
@@ -125,12 +124,13 @@ public final class Selector {
             return kmin;
          }
       }
+      
       if (k > countDistinctValues) {
          throw new NoSuchElementException();
       }
+      
       return kmin;
    }
-
 
    /**
     * Selects the kth maximum value from the Collection coll as defined by the
@@ -171,12 +171,13 @@ public final class Selector {
             return kmax;
          }
       }
+      
       if (k > countDistinctValues) {
          throw new NoSuchElementException();
       }
+      
       return kmax;
    }
-
 
    /**
     * Returns a new Collection containing all the values in the Collection coll
@@ -205,20 +206,21 @@ public final class Selector {
       if (coll.isEmpty()) {
          throw new NoSuchElementException();
       }
+      
       ArrayList <T> range = new ArrayList <T>();
       for(T element : coll) {
          if ((comp.compare(element, low) >= 0) 
-         && (comp.compare(element, high) <= 0)) {
+            && (comp.compare(element, high) <= 0)) {
             range.add(element); 
          }
       }
+      
       if (range.isEmpty()) {
          throw new NoSuchElementException();
       }         
-     
+      
       return range;
    }
-
 
    /**
     * Returns the smallest value in the Collection coll that is greater than
@@ -269,10 +271,9 @@ public final class Selector {
             ceiling = element;  
          }
       }
+      
       return ceiling;
-   
    }
-
 
    /**
     * Returns the largest value in the Collection coll that is less than
@@ -323,7 +324,8 @@ public final class Selector {
             floor = element;  
          }
       }
+      
       return floor;      
    }
-
+   
 }
