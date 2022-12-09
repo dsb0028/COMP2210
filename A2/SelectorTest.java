@@ -88,7 +88,8 @@ public class SelectorTest {
    @Test public void kmaxTest() {
       Collection<Integer> c1 = Arrays.<Integer>asList(new Integer[]{2,8,7,3,4});
       Collection<HandoutExamples.Data> c4 = Arrays.<HandoutExamples.Data>asList(new HandoutExamples.Data[]{
-            new HandoutExamples.Data("A",5), new HandoutExamples.Data("B", 4), new HandoutExamples.Data("C", 3), new HandoutExamples.Data("D", 2), new HandoutExamples.Data("E", 1)});
+            new HandoutExamples.Data("A",5), new HandoutExamples.Data("B", 4), new HandoutExamples.Data("C", 3), 
+            new HandoutExamples.Data("D", 2), new HandoutExamples.Data("E", 1)});
       int k = 2;
       int k1 = 4;
       Comparator comp = HandoutExamples.ascendingInteger;
@@ -104,4 +105,3 @@ public class SelectorTest {
       
    }
 }
-
