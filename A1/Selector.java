@@ -16,14 +16,15 @@ public final class Selector {
     * D O   N O T   C H A N G E   T H I S   C O N S T R U C T O R
     *
     */
+   
    private Selector() { }
-
-
+   
    /**
     * Selects the minimum value from the array a. This method
     * throws IllegalArgumentException if a is null or has zero
     * length. The array a is not changed by this method.
     */
+   
    public static int min(int[] a){
       if(a == null || a.length == 0) {
          throw new IllegalArgumentException();
@@ -36,7 +37,6 @@ public final class Selector {
       }
       return min;
    }
-
 
    /**
     * Selects the maximum value from the array a. This method
@@ -55,7 +55,6 @@ public final class Selector {
       }
       return max;      
    }
-
 
    /**
     * Selects the kth minimum value from the array a. This method
@@ -123,7 +122,6 @@ public final class Selector {
       return kmax;
    }
 
-
    /**
     * Returns an array containing all the values in a in the
     * range [low..high]; that is, all the values that are greater
@@ -156,7 +154,6 @@ public final class Selector {
       }
       return b;
    }
-
 
    /**
     * Returns the smallest value in a that is greater than or equal to
